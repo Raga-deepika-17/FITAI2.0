@@ -59,6 +59,18 @@ habits rather than strict medical recommendations.
 - `*.js` – Application logic
 - `*.json` – Nutrition and exercise data
 
+## 📸 Screenshots
+
+### Home Page
+![Home Page](screenshots/home.jpg)
+
+### BMI Calculator Resulting Info
+![BMI Info](screenshots/bmi.jpg)
+
+### Exercise Selction Resulting Info
+![Exercise Info](screenshots/exercise.jpg)
+
+
 ---
 
 ## 🚀 How to Run
