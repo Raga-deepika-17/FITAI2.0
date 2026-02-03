@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition Information</title>
+    <link rel="stylesheet" href="nstyle.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 id="nh">Nutrition Information</h1>
+        </header>
+        <div class="content">
+            <div class="videos videos-left">
+                <div class="video">
+                    <video autoplay loop muted>
+                        <source src="data/exchange.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted>
+                        <source src="data/green.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="nutrition-info" id="nutritionInfo">
+                <!-- Nutrition information will be populated here -->
+            </div>
+            <div class="videos videos-right">
+                <div class="video">
+                    <video autoplay loop muted>
+                        <source src="data/air.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="video">
+                    <video autoplay loop muted>
+                        <source src="data/apple.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const goal = urlParams.get('goal');
+
+        fetch('nutrition_plans.json')  // Make sure your JSON file is correctly linked
+            .then(response => response.json())
+            .then(data => {
+                let planData;
+
+                switch (goal) {
+                    case "weightLoss":
+                        planData = data.Weight_Loss;
+                            break;
+                    case "muscleGain":
+                        planData = data.Muscle_Gain;
+                        break;
+                    case "maintenance":
+                        planData = data.Maintenance;
+                        break;
+                    default:
+                        planData = null;
+                }
+
+                if (planData) {
+                    const nutritionDetails = `
+                    <div id="ninfo">
+                    <h2>${planData.Type}</h2>
+                    <h3>Foods</h3>
+                    <ul>${planData.Foods.map(food => `<li>${food}</li>`).join('')}</ul>
+                    <h3>Lifestyle Changes</h3>
+                    <ul>${planData.Lifestyle.map(change => `<li>${change}</li>`).join('')}</ul>
+                    <h3>Sample Ideal Plan</h3>
+                    <ul>${planData.Plan.map(plan => `<li>${plan}</li>`).join('')}</ul>
+                    </div>`;
+                    document.getElementById("nutritionInfo").innerHTML = nutritionDetails;
+                    
+                } else {
+                document.getElementById("nutritionInfo").innerHTML = "<p>Invalid goal selected.</p>";
+                }
+            })
+            .catch(error => console.error('Error:', error));
+        });
+
+    </script>
+</body>
+</html>

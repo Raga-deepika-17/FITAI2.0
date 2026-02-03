@@ -1,0 +1,178 @@
+{
+    "Underweight": {
+        "description": "You're on the Journey to Optimal Health! Being underweight can impact your energy and well-being, but with the right steps, you can reach a healthy weight and feel your best. Here's how to support your body:",
+        "exercises": {
+            "Beginner": [
+                "Yoga",
+                "Walking",
+                "Bodyweight exercises (Squats, Push-ups)"
+            ],
+            "Intermediate": [
+                "Light resistance training",
+                "Swimming",
+                "Cycling"
+            ],
+            "Expert": [
+                "HIIT (High-Intensity Interval Training)",
+                "Weightlifting",
+                "Plyometrics"
+            ]
+        },
+        "foods": [
+            "Increase calorie-dense, nutrient-rich foods like nuts, seeds, whole grains, and lean protein.",
+            "Eat more frequently with balanced meals that include proteins (chicken, eggs, tofu), healthy fats (avocados, nuts), and complex carbs (sweet potatoes, quinoa).",
+            "Include smoothies and shakes with protein powder, nut butter, and fruits."
+        ],
+        "lifestyleChanges": [
+            "Focus on gaining muscle mass through resistance training.",
+            "Avoid skipping meals and eat more frequent snacks between meals.",
+            "Manage stress and ensure sufficient sleep for recovery."
+        ]
+    },
+    "Overweight": {
+        "description": "You’re Making Progress Towards a Healthier You! Your efforts toward maintaining or achieving a healthier weight are crucial for long-term well-being. Here are some tips to stay on track:",
+        "exercises": {
+            "Beginner": [
+                "Brisk walking",
+                "Basic bodyweight exercises (Squats, Lunges)"
+            ],
+            "Intermediate": [
+                "Swimming",
+                "Resistance band exercises",
+                "Cycling"
+            ],
+            "Expert": [
+                "Circuit training",
+                "Rowing",
+                "Moderate-intensity running"
+            ]
+        },
+        "foods": [
+            "Focus on a balanced diet rich in fruits, vegetables, lean proteins, and whole grains.",
+            "Limit processed foods and sugars.",
+            "Drink plenty of water and include high-fiber foods like legumes, leafy greens, and oats to stay full longer."
+        ],
+        "lifestyleChanges": [
+            "Incorporate daily physical activity, such as walking or standing more.",
+            "Prioritize portion control and mindful eating practices.",
+            "Set realistic weight loss goals and track progress."
+        ]
+    },
+    "Class 1 Obesity": {
+        "description": "You’re Taking Positive Steps Toward Better Health! Maintaining a healthy weight can greatly enhance your quality of life, and you're on the path to making meaningful changes. Here's how you can continue progressing:",
+        "exercises": {
+            "Beginner": [
+                "Water aerobics",
+                "Light resistance training",
+                "Walking"
+            ],
+            "Intermediate": [
+                "Stationary biking",
+                "Elliptical machine",
+                "Low-impact aerobics"
+            ],
+            "Expert": [
+                "HIIT",
+                "Strength training with weights",
+                "Power walking or jogging"
+            ]
+        },
+        "foods": [
+            "Emphasize portion control and choose lean protein sources (chicken, fish), complex carbs (brown rice, quinoa), and healthy fats (nuts, olive oil).",
+            "Cut back on sugary snacks and focus on high-fiber foods to reduce calorie intake.",
+            "Plan balanced meals and avoid processed and fast food."
+        ],
+        "lifestyleChanges": [
+            "Monitor calorie intake with a focus on reducing processed foods and sugary drinks.",
+            "Include daily low-impact activities, such as walking or swimming, to maintain consistency.",
+            "Improve sleep hygiene, aiming for 7-8 hours of sleep per night."
+        ]
+    },
+    "Class 2 Obesity": {
+        "description": "You’re Committed to Improving Your Health! Reaching a healthy weight is achievable with consistent effort and dedication. Here’s how you can continue working towards your goals:",
+        "exercises": {
+            "Beginner": [
+                "Chair exercises",
+                "Walking",
+                "Modified bodyweight exercises",
+                "Begin with low-impact exercises like seated strength training, chair yoga, or water aerobics to protect your joints."
+            ],
+            "Intermediate": [
+                "Low-impact aerobics",
+                "Water jogging",
+                "Resistance band exercises",
+                "Gradually increase your activity level by incorporating more walking or gentle cardio."
+            ],
+            "Expert": [
+                "Strength training",
+                "Cycling",
+                "Aerobic step classes"
+            ]
+        },
+        "foods": [
+            "Prioritize low-calorie, nutrient-rich foods like leafy greens, lean proteins, whole grains, and legumes.",
+            "Avoid sugary snacks and drinks, and practice portion control to support gradual weight loss.",
+            "Practice meal prepping to avoid unhealthy choices during busy times."
+        ],
+        "lifestyleChanges": [
+            "Set a structured eating plan and avoid emotional eating.",
+            "Aim for gradual weight loss (1-2 lbs per week) through consistent exercise and healthy eating.",
+            "Engage in stress-reducing activities like yoga or meditation."
+        ]
+    },
+    "Class 3 Obesity": {
+        "description": "You’re Taking Charge of Your Health! Every step you take brings you closer to achieving your health goals. With consistency and determination, you can make lasting improvements to your weight and well-being.",
+        "exercises": {
+            "Beginner": [
+                "Chair yoga",
+                "Water-based exercises",
+                "Seated strength training",
+                "Begin with low-impact exercises like seated strength training, chair yoga, or water aerobics to protect your joints."
+            ],
+            "Intermediate": [
+                "Walking with increasing intensity",
+                "Modified strength training",
+                "Gradually increase your activity level by incorporating more walking or gentle cardio."
+            ],
+            "Expert": [
+                "Low-impact interval training",
+                "Resistance training",
+                "Cardio on machines like ellipticals"
+            ]
+        },
+        "foods": [
+            "Focus on low-calorie, high-nutrient foods like fruits, vegetables, lean proteins, and legumes.",
+            "Avoid sugary beverages and processed snacks, and incorporate whole grains and plenty of water.",
+            "Follow a meal plan designed for slow and sustainable weight loss."
+        ],
+        "lifestyleChanges": [
+            "Work with a healthcare provider to create a sustainable weight-loss plan.",
+            "Incorporate daily low-impact physical activity, even if broken into shorter periods.",
+            "Make sleep, stress management, and consistency with healthy habits a priority."
+        ]
+    },
+    "Healthy Weight": {
+        "description": "Congratulations on Maintaining a Healthy Weight! Maintaining a healthy weight is key to long-term well-being. Here's how you can continue to optimize your health:",
+        "exercises": {
+            "Beginner": [
+                "Continue with low-impact activities like walking, yoga, or swimming to stay active."
+            ],
+            "Intermediate": [
+                "Include strength training exercises (e.g., resistance bands, bodyweight exercises) and moderate cardio (jogging, cycling) 3-4 times a week."
+            ],
+            "Expert": [
+                "Mix in HIIT sessions, advanced strength training, or endurance activities (running, rowing) to challenge yourself and keep improving."
+            ]
+        },
+        "foods": [
+            "Focus on a balanced diet with a variety of fruits, vegetables, lean proteins (chicken, fish), and whole grains.",
+            "Ensure you're getting enough healthy fats (avocados, nuts, olive oil) and high-fiber foods (beans, oats).",
+            "Stay hydrated and avoid excessive sugar or processed foods to maintain your weight and energy levels."
+        ],
+        "lifestyleChanges": [
+            "Maintain regular physical activity (at least 30 minutes a day) and stay consistent with your routine.",
+            "Prioritize mental health with practices like mindfulness, meditation, and stress management.",
+            "Ensure you get 7-8 hours of quality sleep to support your overall health and recovery."
+        ]
+    }
+}

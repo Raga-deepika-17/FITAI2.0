@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Exercises</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: aquamarine;">
+    <div class="container">
+        <header>
+            <h1 id="header2">More Exercises</h1>
+        </header>
+        <div class="main-content">
+            <div class="exercise-list" id="exerciseList" style="color:#333; font-weight: bold;">
+                <!-- Exercise names will be populated here -->
+            </div>
+            <div class="panel" id="exerciseInfoPanel" style="background-color: #333; color:white;">
+                <!-- Exercise information will be displayed here -->
+            </div>
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const level = urlParams.get('level');
+
+        fetch('exercises.json')
+            .then(response => response.json())
+            .then(data => {
+                const exercises = Object.values(data).filter(exercise => exercise.level === level);
+                const exerciseList = exercises.map(exercise => `
+                    <p>${exercise.name} <button onclick="showExerciseInfo('${exercise.name}')">More Info</button></p>
+                `).join("");
+
+                document.getElementById("exerciseList").innerHTML = exerciseList;
+            })
+            .catch(error => console.error('Error:', error));
+
+        function showExerciseInfo(name) {
+            fetch('exercises.json')
+                .then(response => response.json())
+                .then(data => {
+                    const exercise = Object.values(data).find(exercise => exercise.name === name);
+                    document.getElementById("exerciseInfoPanel").innerHTML = `
+                        <h2>${exercise.name}</h2>
+                        <p><strong>Force:</strong> ${exercise.force}</p>
+                        <p><strong>Level:</strong> ${exercise.level}</p>
+                        <p><strong>Mechanic:</strong> ${exercise.mechanic || "N/A"}</p>
+                        <p><strong>Equipment:</strong> ${exercise.equipment}</p>
+                        <p><strong>Primary Muscles:</strong> ${exercise.primaryMuscles.join(", ")}</p>
+                        <p><strong>Secondary Muscles:</strong> ${exercise.secondaryMuscles.join(", ")}</p>
+                        <p><strong>Instructions:</strong></p>
+                        <ol>${exercise.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
+                        <p><strong>Category:</strong> ${exercise.category}</p>
+                    `;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</body>
+</html>

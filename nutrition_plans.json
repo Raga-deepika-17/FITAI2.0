@@ -1,0 +1,81 @@
+{
+    "Weight_Loss": {
+        "Type": "Weight Loss",
+        "Foods": [
+            " Lean Proteins: Chicken, turkey, fish, tofu, and legumes to support muscle mass and keep you full.",
+            " Vegetables and Fruits: High in fiber and low in calories, they help with digestion and provide essential vitamins and minerals.",
+            " Whole Grains: Brown rice, quinoa, and oats to provide sustained energy and reduce cravings.",
+            " Healthy Fats: Avocados, nuts, seeds, and olive oil to support heart health and reduce inflammation.",
+            " Low-fat Dairy: Yogurt, milk, and cheese for calcium and protein."
+        ],
+        "Lifestyle": [
+            " Regular Exercise: Combine cardio with strength training to burn calories and build muscle.",
+            " Portion Control: Focus on eating smaller, balanced meals more frequently throughout the day.",
+            " Hydration: Drink plenty of water to aid digestion and curb hunger.",
+            " Sleep: Ensure 7-8 hours of sleep per night to regulate metabolism and appetite.",
+            " Mindful Eating: Avoid distractions while eating and focus on enjoying your meals to prevent overeating."
+        ],
+        "Plan": [
+            "Breakfast: Oatmeal with berries and a boiled egg.",
+            "Mid-Morning Snack: A handful of almonds and an apple.",
+            "Lunch: Grilled chicken salad with mixed greens, cherry tomatoes, cucumber, and olive oil dressing.",
+            "Afternoon Snack: Greek yogurt with a sprinkle of flaxseeds.",
+            "Dinner: Baked salmon with steamed broccoli and quinoa.",
+            "Evening Snack (if needed): A small piece of dark chocolate or a fruit.",
+            "This plan can be adjusted based on individual preferences and goals, ensuring you stay on track with your weight loss journey."
+        ]
+    },
+    "Muscle_Gain": {
+        "Type": "Muscle Gain",
+        "Foods": [
+            " Lean Proteins: Chicken, beef, fish, eggs, tofu, and protein supplements to provide essential amino acids needed for muscle repair and growth.",
+            " Complex Carbohydrates: Brown rice, sweet potatoes, oats, and whole-grain bread for sustained energy and to replenish glycogen stores in muscles.",
+            " Healthy Fats: Nuts, seeds, avocados, and olive oil to support hormone production and overall health.",
+            " Vegetables and Fruits: A variety of colorful vegetables and fruits for vitamins, minerals, and fiber.",
+            " Dairy Products: Milk, yogurt, and cheese for additional protein and calcium."
+        ],
+        "Lifestyle": [
+            " Strength Training: Focus on progressive resistance exercises to stimulate muscle growth.",
+            " Caloric Surplus: Consume more calories than you burn, focusing on nutrient-dense foods.",
+            " Protein Timing: Distribute protein intake evenly throughout the day and include a post-workout meal rich in protein and carbs.",
+            " Adequate Rest: Ensure proper recovery by getting 7-8 hours of sleep and allowing muscle groups to rest between workouts.",
+            " Consistency: Stick to your workout and nutrition plan consistently to see long-term results."
+        ],
+        "Plan": [
+            "Breakfast: Scrambled eggs with spinach and whole-grain toast, and a glass of milk.",
+            "Mid-Morning Snack: Greek yogurt with honey and mixed berries.",
+            "Lunch: Grilled chicken breast, quinoa, and roasted vegetables.",
+            "Afternoon Snack: A protein shake and a banana.",
+            "Dinner: Grilled salmon, sweet potato, and steamed broccoli.",
+            "Evening Snack (if needed): Cottage cheese with almonds.",
+            "This plan can be adjusted based on your specific goals, workout intensity, and personal preferences to help you achieve muscle gain."
+        ]
+    },
+    "Maintenance": {
+        "Type": "Maintenance",
+        "Foods": [
+            " Balanced Macronutrients: A mix of proteins, carbohydrates, and healthy fats to maintain muscle mass, energy levels, and overall health.",
+            " Lean Proteins: Chicken, fish, eggs, tofu, and legumes to support muscle maintenance and keep you full.",
+            " Whole Grains: Brown rice, whole wheat bread, and oats for sustained energy and fiber.",
+            " Vegetables and Fruits: A variety of colorful vegetables and fruits for essential vitamins, minerals, and antioxidants.",
+            " Healthy Fats: Avocados, nuts, seeds, and olive oil for heart health and hormone regulation.",
+            " Dairy Products: Milk, yogurt, and cheese for calcium and protein."
+        ],
+        "Lifestyle": [
+            " Consistent Exercise: Engage in regular physical activity, combining cardio with strength training to maintain muscle mass and cardiovascular health.",
+            " Portion Control: Eat balanced meals that provide enough energy without excessive calorie intake.",
+            " Hydration: Continue drinking plenty of water to stay hydrated and support digestion.",
+            " Sleep: Ensure 7-8 hours of sleep per night to maintain energy levels and overall well-being.",
+            " Mindful Eating: Pay attention to hunger and fullness cues, and avoid overeating."
+        ],
+        "Plan": [
+            "Breakfast: Whole grain toast with avocado and a poached egg, and a side of fruit.",
+            "Mid-Morning Snack: A handful of mixed nuts and an apple.",
+            "Lunch: Grilled chicken wrap with whole wheat tortilla, mixed greens, tomatoes, and hummus.",
+            "Afternoon Snack: Low-fat yogurt with a sprinkle of granola.",
+            "Dinner: Stir-fried tofu with mixed vegetables and brown rice.",
+            "Evening Snack (if needed): A piece of dark chocolate or a small portion of fruit.",
+            "This plan can be tailored to individual preferences and lifestyles, helping you maintain your weight and health over the long term."
+        ]
+    }
+}

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI More Info</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Additional styles specific to more_info.html */
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+        }
+
+        .info-section {
+            margin-top: 20px;
+        }
+
+        .info-grid {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .info-square {
+            width: 250px;
+            height: 150px;
+            background-color: #e7f3fe;
+            border: 2px solid #2196F3;
+            border-radius: 10px;
+            margin: 10px;
+            position: relative;
+            padding: 20px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            cursor: pointer;
+            overflow: hidden;
+        }
+
+        .info-square:hover {
+            transform: scale(1.05);
+        }
+
+        .info-square h3 {
+            margin-top: 0;
+        }
+
+        .info-square .brief {
+            font-size: 14px;
+            color: #333;
+            transition: filter 0.3s;
+        }
+
+        .info-square:hover .brief {
+            filter: blur(4px);
+        }
+
+        .info-square .show-more {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16px;
+            color: #2196F3;
+            text-decoration: underline;
+            cursor: pointer;
+            display: none;
+            z-index: 1;
+        }
+
+        .info-square:hover .show-more {
+            display: block;
+        }
+
+        .hidden-content {
+            display: none;
+        }
+
+        .show-more-btn {
+            margin-top: 10px;
+            padding: 8px 12px;
+            background-color: #2196F3;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .show-more-btn:hover {
+            background-color: #0b7dda;
+        }
+        .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent backdrop */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: #e7f3fe; /* Match the info square background color */
+    border: 2px solid #2196F3; /* Match the info square border color */
+    border-radius: 10px;
+    padding: 20px;
+    max-width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+    position: relative;
+    text-align: center; /* Center text within the popup */
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: #2196F3;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.popup-close:hover {
+    color: #0b7dda;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 id="header3">Fitness Assistant - More Information</h1>
+        <div id="bmiInfo">
+            <h2>Your BMI: <span id="bmiValue"></span></h2>
+            <h3>Health Level: <span id="healthLevel"></span></h3>
+            <p id="description"></p>
+        </div>
+
+        <div class="info-section">
+            <h3>Here's how you can support your body:</h3>
+            <div class="info-grid">
+                <div class="info-square" id="exerciseSquare">
+                    <h3>Exercise Recommendations</h3>
+                    <p class="brief">Focus on strength-building exercises such as light resistance training, yoga, and bodyweight exercises to promote muscle gain. Start with low-impact activities and gradually progress as your strength improves.</p>
+                    <span class="show-more" onclick="openPopup('exerciseDetails')">See More</span>
+                    <div class="hidden-content" id="exerciseDetails">
+                        <h4>Exercises:</h4>
+                        <p><strong>Beginner:</strong> Yoga, Walking, Bodyweight exercises (Squats, Push-ups)</p>
+                        <p><strong>Intermediate:</strong> Light resistance training, Swimming, Cycling</p>
+                        <p><strong>Expert:</strong> HIIT (High-Intensity Interval Training), Weightlifting, Plyometrics</p>
+                    </div>
+                </div>
+
+                <div class="info-square" id="foodSquare">
+                    <h3>Healthy Foods</h3>
+                    <p class="brief">Eat nutrient-rich, calorie-dense foods like nuts, seeds, lean proteins, and whole grains. Incorporate frequent meals and snacks to increase calorie intake while focusing on balanced nutrition.</p>
+                    <span class="show-more" onclick="openPopup('foodDetails')">See More</span>
+                    <div class="hidden-content" id="foodDetails">
+                        <h4>Foods:</h4>
+                        <p><strong>Underweight:</strong> Increase calorie-dense foods like nuts, seeds, whole grains, lean proteins (chicken, eggs, tofu).</p>
+                        <p><strong>Overweight:</strong> Focus on balanced meals with vegetables, lean proteins, whole grains. Limit processed foods and sugars.</p>
+                        <p><strong>Obesity Classes:</strong> Prioritize nutrient-dense, low-calorie foods like leafy greens, lean proteins, whole grains, legumes.</p>
+                    </div>
+                </div>
+
+                <div class="info-square" id="lifestyleSquare">
+                    <h3>Lifestyle Tips</h3>
+                    <p class="brief">Focus on gaining muscle mass through resistance training, avoid skipping meals, manage stress, and ensure sufficient sleep for recovery.</p>
+                    <span class="show-more" onclick="openPopup('lifestyleDetails')">See More</span>
+                    <div class="hidden-content" id="lifestyleDetails">
+                        <h4>Lifestyle Tips:</h4>
+                        <p><strong>Underweight:</strong> Focus on muscle gain, avoid skipping meals, manage stress, ensure sufficient sleep.</p>
+                        <p><strong>Overweight:</strong> Incorporate daily physical activity, practice mindful eating, set realistic goals.</p>
+                        <p><strong>Obesity Classes:</strong> Structured eating plans, gradual weight loss, stress-reducing activities, improve sleep hygiene.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        
+        // Function to open a popup with the detailed content
+    function openPopup(id) {
+    const content = document.getElementById(id).innerHTML;
+    const popup = document.createElement('div');
+    popup.className = 'popup';
+    popup.innerHTML = `
+        <div class="popup-content">
+            <span class="popup-close" onclick="closePopup()">&times;</span>
+            ${content}
+        </div>
+    `;
+    document.body.appendChild(popup);
+}
+
+// Function to close the popup
+function closePopup() {
+    const popup = document.querySelector('.popup');
+    if (popup) {
+        document.body.removeChild(popup);
+    }
+}
+
+        
+        // Function to fetch and display BMI and health level
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const bmi = urlParams.get('bmi');
+            const healthLevel = urlParams.get('healthLevel');
+
+            // Display BMI and Health Level
+            document.getElementById('bmiValue').textContent = bmi;
+            document.getElementById('healthLevel').textContent = healthLevel;
+
+            // Fetch health advice from JSON
+            fetch('health_advice.json')
+                .then(response => response.json())
+                .then(data => {
+                    const advice = data[healthLevel];
+                    if (advice) {
+                        document.getElementById('description').textContent = advice.description;
+                        
+                        // Update the brief descriptions in squares based on health level
+                        const exerciseBrief = "Focus on " + advice.exercises.Beginner.join(", ") + " to promote muscle gain and overall fitness.";
+                        const foodBrief = "Incorporate nutrient-rich, balanced meals and avoid unhealthy snacks to support your health goals.";
+                        const lifestyleBrief = "Adopt healthy habits like regular physical activity, stress management, and adequate sleep.";
+
+                        document.querySelector('#exerciseSquare .brief').textContent = advice.exercises.Beginner.length > 0 ? 
+                            `Focus on strength-building exercises such as light resistance training, yoga, and bodyweight exercises to promote muscle gain. Start with low-impact activities and gradually progress as your strength improves.` : 
+                            "Focus on strength-building exercises and start with low-impact activities.";
+
+                        document.querySelector('#foodSquare .brief').textContent = advice.foods.join(" ");
+
+                        document.querySelector('#lifestyleSquare .brief').textContent = advice.lifestyleChanges.join(" ");
+                    } else {
+                        document.getElementById('description').textContent = "No advice available for your health level.";
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching health advice:', error);
+                    document.getElementById('description').textContent = "Error loading health advice.";
+                });
+        });
+    </script>
+</body>
+</html>

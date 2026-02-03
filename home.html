@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .popup {
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+            width: 600px; /* Reduced size */
+            height: 600px; /* Reduced size */
+        }
+
+        .popup-content {
+            position: relative;
+            background-color: #e7f3fe; /* Blue hue */
+            margin: auto;
+            padding: 20px;
+            border: 2px solid #2196F3; /* Blue border */
+            border-radius: 10px;
+        }
+
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        #spinButton {
+            position: absolute;
+            top: 55%;
+            left: 50%;
+            bottom: 50%;
+            transform: translate(-50%,-50%);
+            width: 60px; /* Reduced size */
+            height: 60px; /* Reduced size */
+            background-color: black; /* Changed to black */
+            color: white;
+            border: none;
+            border-radius: 50%;
+            font-size: 14px; /* Smaller font size */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #spinButton i {
+            margin-right: 5px;
+        }
+
+        #spinButton::before {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 20px solid red;
+            top: -20px; /* Adjust to position arrow correctly */
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        #wheelCanvas {
+            margin: 0 auto;
+            display: block;
+        }
+        /* Additional styles for the wheel options */
+        .wheel-option {
+            font-size: 16px; /* Increased font size */
+            padding: 10px; /* Increased padding */
+        }
+        
+        #resultPopup {
+            position: absolute;
+            top: 50%; /* Align vertically relative to the page */
+            left: calc(50% - 610px); /* Place 10px left of surprisePopup */
+            transform: translateY(-50%); /* Center it vertically */
+            width: 300px;
+            height: 200px;
+            background-color: #e7f3fe;
+            border: 2px solid #2196F3;
+            border-radius: 10px;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.1);
+            z-index: 1001;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="homebody">
+    <div class="container">
+        <!-- New Navbar -->
+        <nav class="navbar">
+            <div class="nav-title">
+                <h1><i class="fas fa-dumbbell"></i> Fitness Assistant</h1>
+            </div>
+            <div class="nav-links">
+                <a href="playlists.html"><b>Playlists</b></a>
+                <a href="#" id="surpriseMeLink"><b>Surprise Me</b></a>
+                <a href="#"><b>Recommendations</b></a>
+            </div>
+        </nav>
+        <!-- Main content -->
+        <div class="main-content">
+            <nav class="sidebar">
+                <button onclick="showBMI()"><b><i>Calculate BMI</i></b></button>
+                <button onclick="showExercises()"><b><i>Get Exercises</i></b></button>
+                <button onclick="showNutrition()"><b><i>Nutrition Plan</i></b></button>
+            </nav>
+            <div class="panel" id="panel">
+                <!-- Dynamic content will be displayed here -->
+            </div>
+        </div>
+        <!-- Popup for 'Surprise Me' -->
+        <div id="surprisePopup" class="popup" style="display:none;">
+            <div class="popup-content">
+                <span class="close">&times;</span>
+                <h2 style="text-align: center;">Spin the Wheel!</h2>
+                <div id="wheel-container">
+                    <canvas id="wheelCanvas" width="400" height="400"></canvas>
+                    <button id="spinButton"> Spin</button>
+                </div>
+            </div>
+            <!-- Result Popup -->
+            <div id="resultPopup" class="popup" style="display:none;">
+                <div class="popup-content" style="width: 300px; height: 200px;">
+                    <span class="close">&times;</span>
+                    <div id="resultDisplay"></div>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <script src="script.js"></script>
+    <script src="wheelscript.js"></script>
+</body>
+</html>

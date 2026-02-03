@@ -1,0 +1,137 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.homebody{
+    background-image: url('data/bg2.jpg');
+    background-size: 1360px;
+    background-repeat: no-repeat;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#header1,#header2,#header3{
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+#homeh{
+    color: white;
+    padding: 30px;
+    text-align: center;
+    font-weight:bolder;
+}
+.main-content {
+    padding-top: 30px;
+    display: flex;
+    width: 100%;
+    max-width: 900px;
+    margin-top: 20px;
+}
+
+.sidebar {
+    background-color: #758da3;
+    padding: 20px;
+    color: black;
+    width: 200px;
+}
+
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color:lightgrey;
+    color: black;
+    font-size: medium;
+    border: none;
+    cursor: pointer;
+}
+
+.sidebar button:hover {
+    background-color: #758da3;
+}
+
+/* General styles remain the same */
+
+.navbar {
+    padding-top:20px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* Removed background color */
+}
+
+.nav-title h1 {
+    color: white;
+    margin: 0;
+    font-size: 30px; /* Increased font size for the title */
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px; /* Slightly smaller font size for anchor tags */
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Slight hover effect with a subtle background */
+}
+.nav-title {
+    margin-left: 20px; /* Adds space to the left of the logo and title */
+}
+
+.nav-title i {
+    margin-right: 10px; /* Spacing between the icon and the title */
+    padding: 10px; /* Padding inside the circle */
+    border: 2px solid white; /* Circle border */
+    border-radius: 50%; /* Makes the shape circular */
+    font-size: 24px; /* Adjust the icon size */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.panel {
+    background-color:#758da3;
+    flex-grow: 1;
+    padding: 20px;
+    margin-left: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+.exercise-list, .exercise-info-list {
+    flex-grow: 1;
+    margin-right: 20px;
+}
+
+.exercise-list p, .exercise-details {
+    margin: 10px 0;
+}
+
+.exercise-details h2 {
+    margin-top: 0;
+}
+

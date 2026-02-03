@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Information</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body style="background-color: aqua;">
+    <div class="container">
+        <header>
+            <h1 id="header1">Exercise Information</h1>
+        </header>
+        <div class="exercise-info-list" id="exerciseInfoList">
+            <!-- Full exercise details will be populated here -->
+        </div>
+    </div>
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+    const exerciseKeys = urlParams.get('exercises').split(',');
+
+fetch('exercises.json')
+    .then(response => response.json())
+    .then(data => {
+        const exerciseInfoList = exerciseKeys.map(key => {
+            const exercise = data[key];
+            return `
+                <div class="exercise-details">
+                    <h2>${exercise.name}</h2>
+                    <p><strong>Force:</strong> ${exercise.force}</p>
+                    <p><strong>Level:</strong> ${exercise.level}</p>
+                    <p><strong>Mechanic:</strong> ${exercise.mechanic || "N/A"}</p>
+                    <p><strong>Equipment:</strong> ${exercise.equipment}</p>
+                    <p><strong>Primary Muscles:</strong> ${exercise.primaryMuscles.join(", ")}</p>
+                    <p><strong>Secondary Muscles:</strong> ${exercise.secondaryMuscles.join(", ")}</p>
+                    <p><strong>Instructions:</strong></p>
+                    <ol>${exercise.instructions.map(instruction => `<li>${instruction}</li>`).join("")}</ol>
+                    <p><strong>Category:</strong> ${exercise.category}</p>
+                   ${exercise.video ? `<iframe width="560" height="315" src="${exercise.video}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>` : ""}
+
+                </div>
+                <hr>
+            `;
+        }).join("");
+
+        document.getElementById("exerciseInfoList").innerHTML = exerciseInfoList;
+    })
+    .catch(error => console.error('Error:', error));
+
+        
+    </script>
+</body>
+</html>
